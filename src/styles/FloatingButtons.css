@@ -1,0 +1,77 @@
+.floating-btn {
+  position: fixed;
+  z-index: 1100;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #2cc970;
+  color: white;
+  box-shadow: 0 5px 14px rgba(44, 62, 80, 0.18);
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  cursor: pointer;
+  transition: background 0.22s, box-shadow 0.22s;
+  right: 28px;
+}
+
+.top-btn {
+  bottom: 96px; /* Position above WhatsApp */
+  background: #273144;
+}
+
+.top-btn:hover {
+  background: #46aeff;
+}
+
+/* .whatsapp-btn {
+  bottom: 38px;
+  background: #25d366;
+}
+
+.whatsapp-btn:hover {
+  background: #128c7e;
+} */
+
+.telegram-btn {
+  background-color: #0088cc; /* Telegram blue */
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.telegram-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 136, 204, 0.5);
+}
+
+@media (max-width: 768px) {
+  .floating-btn {
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    bottom: 80px;
+  }
+  .top-btn {
+    bottom: 130px;
+    border: #0088cc solid 1px;
+  }
+  .whatsapp-btn {
+    bottom: 18px;
+  }
+}
