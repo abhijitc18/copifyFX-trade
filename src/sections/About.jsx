@@ -45,7 +45,7 @@ const About = () => (
           <FaLinkedin />
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/copifyfx/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -53,7 +53,7 @@ const About = () => (
           <FaInstagram />
         </a>
         <a
-          href="#"
+          href="https://www.facebook.com/profile.php?id=61584286101023"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -61,7 +61,7 @@ const About = () => (
           <FaFacebook />
         </a>
         <a
-          href="#"
+          href="https://t.me/CopifyFX_Bot"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Telegram"

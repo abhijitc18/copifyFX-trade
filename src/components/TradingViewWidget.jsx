@@ -49,7 +49,7 @@ const TradingViewWidget = () => {
       <div className="container">
         <div className="section-title">
           <h2 className="forex-widget-title">
-            Forex Trading
+            Currency Market
             <span className="angled-underline">
               <span className="skew-bar"></span>
               <span className="circle-dot"></span>

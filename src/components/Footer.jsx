@@ -14,8 +14,9 @@ const Footer = () => (
       <div className="footer-column">
         <h3>About Us</h3>
         <p>
-          With a focus on integrity and client success, we deliver personalized
-          trading solutions and professional coaching.
+          CopifyFX is a smart copy-trading platform that helps you follow expert
+          traders with ease. Connect your MT4/MT5 account, copy top strategies,
+          and trade with confidence powered by AI.
         </p>
       </div>
 
@@ -43,7 +44,7 @@ const Footer = () => (
             <FaLinkedin />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/copifyfx/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -51,7 +52,7 @@ const Footer = () => (
             <FaInstagram />
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=61584286101023"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -59,7 +60,7 @@ const Footer = () => (
             <FaFacebook />
           </a>
           <a
-            href="#"
+            href="https://t.me/CopifyFX_Bot"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Telegram"

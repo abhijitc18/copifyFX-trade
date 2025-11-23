@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/FloatingButtons.css";
 import { FaArrowUp, FaTelegramPlane } from "react-icons/fa";
 
-const telegramUsername = "+910000000000"; // Use your WhatsApp number
+const telegramUsername = "+919579587848"; // Use your WhatsApp number
 
 const FloatingButtons = () => {
   const [showScroll, setShowScroll] = useState(false);
