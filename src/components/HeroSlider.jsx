@@ -9,8 +9,8 @@ import banner4 from "../assets/banner04.jpeg";
 const slides = [
   {
     id: 1,
-    title: "4+ Years of Proven Forex Performance",
-    subtext: "$5M+ Portfolios Managed",
+    title: "Trusted Portfolio Management for Global Traders",
+    subtext: "5+ Years of Consistent Forex Growth",
     cta: "",
     backgroundStyle: {
       backgroundImage: `url(${banner1}`,
@@ -21,8 +21,8 @@ const slides = [
   },
   {
     id: 2,
-    title: "Empowering Traders with AI Precision",
-    subtext: "Signals • Insights • Proven Results",
+    title: "Trade Smarter with AI-Backed Insights",
+    subtext: "Accurate Signals • Market Analysis • Smart Decisions",
     cta: "",
     backgroundStyle: {
       backgroundImage: `url(${banner2}`,
@@ -33,9 +33,8 @@ const slides = [
   },
   {
     id: 3,
-    title: "Comprehensive Forex Solutions",
-    subtext:
-      '"Expert Signals | Personalized Consultations | Professional Training"',
+    title: "Complete Forex Trading Solutions",
+    subtext: "Signals | 1-on-1 Guidance | Beginner to Pro Training",
     cta: "",
     backgroundStyle: {
       backgroundImage: `url(${banner3}`,
@@ -46,15 +45,15 @@ const slides = [
   },
   {
     id: 4,
-    title: "Ready to Profit? Talk to Our Experts!",
-    subtext: "",
-    cta: "Reach Out",
+    title: "Start Earning with Expert Support",
+    subtext: "Join Our Growing Community of Profitable Traders",
+    cta: "Join Now",
     backgroundStyle: {
       backgroundImage: `url(${banner4}`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     },
-    ctaLink: "#contact",
+    ctaLink: "#our-partners",
   },
 ];
 

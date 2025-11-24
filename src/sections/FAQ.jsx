@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/FAQ.css";
-import { FiChevronDown } from "react-icons/fi"; // Install react-icons if you haven't
+import { FiChevronDown } from "react-icons/fi";
 
 const faqs = [
   {
@@ -36,7 +36,7 @@ const FAQ = () => {
     <section className="faq-section">
       <div className="faq-heading">
         <h2 className="faq-title">Frequently Asked Questions</h2>
-        <span className="angled-underline">
+        <span className="angled-underline accent-bar">
           <span className="skew-bar"></span>
           <span className="circle-dot"></span>
         </span>
@@ -47,15 +47,22 @@ const FAQ = () => {
             className={`faq-card${openIndex === idx ? " open" : ""}`}
             key={idx}
           >
-            <button className="faq-question" onClick={() => toggleFAQ(idx)}>
+            <button
+              className={`faq-question${openIndex === idx ? " expanded" : ""}`}
+              aria-expanded={openIndex === idx}
+              aria-controls={`faq-panel-${idx}`}
+              onClick={() => toggleFAQ(idx)}
+            >
               <span>{item.question}</span>
               <FiChevronDown
                 className={`faq-chevron${openIndex === idx ? " rotated" : ""}`}
               />
             </button>
             <div
+              id={`faq-panel-${idx}`}
               className={`faq-answer${openIndex === idx ? " open" : ""}`}
               style={{ maxHeight: openIndex === idx ? "340px" : "0" }}
+              aria-hidden={openIndex !== idx}
             >
               {openIndex === idx && <p>{item.answer}</p>}
             </div>

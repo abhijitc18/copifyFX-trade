@@ -1,81 +1,190 @@
 .clients-section {
   padding: 7rem 1rem;
-  /* background: linear-gradient(90deg, #e3f0fd 78%, #e1ffe1 100%); */
+  /* background: linear-gradient(120deg, #ecf5fa 80%, #e6e9fa 100%); */
 }
 
 .client-heading {
   text-align: center;
-  /* font-size: 2.3rem;
-  font-weight: 700;
-  color: #223254;
-  margin-bottom: 6rem; */
+  margin-bottom: 55px;
 }
 
 .happy-clients-title {
-  position: relative;
   font-size: 2.3rem;
   color: #273144;
   font-weight: 900;
   letter-spacing: 0.07em;
-  margin-bottom: 55px;
   text-align: center;
 }
 
-.swiper {
-  padding-bottom: 2.5rem;
-}
-
-.client-card {
-  background: transparent;
-  border-radius: 20px;
-  box-shadow: 0 8px 28px rgba(44, 62, 80, 0.11);
-  width: 350px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.client-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1.1rem;
-  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.09);
-}
-
-.client-name {
+.clients-subtext {
+  color: #888;
   font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #223254;
+  margin-top: 25px;
 }
 
-.client-profit {
+/* Glass testimonial card */
+.client-card-glass {
+  border-radius: 26px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.74) 85%,
+    #e8f6ff 100%
+  );
+  border: 2.7px solid rgba(67, 199, 247, 0.14);
+  padding: 2.8rem 1.7rem 1.5rem 1.7rem;
+  min-width: 322px;
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  transition: box-shadow 0.28s, border-color 0.27s;
+}
+
+.client-card-glass:hover {
+  box-shadow: 0 18px 54px rgba(44, 184, 255, 0.16),
+    0 2px 8px rgba(0, 0, 0, 0.07);
+  border-color: #43c7f7;
+}
+
+.client-image-wrap {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #43c7f7 50%, #5573fa 100%);
+  border-radius: 50%;
+  padding: 6px;
+  width: 84px;
+  height: 84px;
+  box-shadow: 0 0px 10px rgba(44, 62, 80, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-image-glass {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.13);
+}
+
+.client-card-content {
+  margin-top: 52px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-icon {
+  font-size: 1.4rem;
+  color: #43c7f7;
+  opacity: 0.6;
+  margin-bottom: 0.8rem;
+  animation: bounceIn 1.5s 1;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+.client-quote-glass {
+  font-style: italic;
+  font-size: 1.09rem;
+  color: #585a78;
+  margin-bottom: 1.1rem;
+  min-height: 54px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.53;
+}
+
+.client-name-glass {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #223254;
+  margin-bottom: 0.32rem;
+}
+
+.client-profit-glass {
   font-weight: 500;
   color: #2cc970;
-  margin-bottom: 0.5rem;
-  font-size: 1.02rem;
-}
-
-.client-quote {
-  font-style: italic;
-  font-size: 1.07rem;
-  color: #585a78;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.52rem;
+  font-size: 1.01rem;
 }
 
 .star-rating {
+  display: flex;
+  gap: 2px;
+  font-size: 1.32rem;
+}
+
+.star {
+  color: #d1d3d9;
+  transition: color 0.17s;
+}
+.star.active {
   color: #ffd700;
-  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .client-card-glass {
+    min-width: 300px;
+    max-width: 99vw;
+  }
 }
 
 @media (max-width: 768px) {
   .clients-section {
-    padding: 3rem 1rem;
+    padding: 3.5rem 0.3rem;
   }
   .happy-clients-title {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.32rem;
   }
+  .clients-subtext {
+    font-size: 0.8rem;
+    margin-top: 25px;
+    padding: 0 10px 0 10px;
+  }
+  .client-card-content {
+    margin-top: 30px;
+  }
+  .client-card-glass {
+    padding: 2.1rem 0.3rem 1rem 0.3rem;
+  }
+  .client-quote-glass {
+    font-size: 0.94rem;
+    min-height: 20px;
+  }
+  .client-image-wrap {
+    width: 64px;
+    height: 64px;
+    top: -32px;
+  }
+  .client-image-glass {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.swiper {
+  padding-bottom: 2.5rem;
 }

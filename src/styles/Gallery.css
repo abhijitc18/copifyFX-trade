@@ -1,6 +1,6 @@
 .gallery-section {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 0 20px;
 }
 
@@ -20,7 +20,6 @@
   margin: 0 auto;
 }
 
-/* Add horizontal space between slides */
 .swiper-slide {
   padding: 0 14px; /* gap between images */
   box-sizing: border-box;
@@ -49,6 +48,6 @@
     padding: 0 6px;
   }
   .gallery-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }

@@ -1,27 +1,27 @@
 import React from "react";
 import "../styles/Services.css";
 
-import signalImg from "../assets/TradingSignals.jpeg";
-import riskImg from "../assets/RiskManagement.jpg";
-import coachingImg from "../assets/PersonalCoaching.jpg";
+import signalImg from "../assets/Trading-Signals.png";
+import riskImg from "../assets/Risk-Management.png";
+import coachingImg from "../assets/Personal-Coaching.png";
 
 const services = [
   {
     title: "Trading Signals",
     description:
-      "Receive accurate and timely forex trading signals tailored to market trends, helping you make informed decisions.",
+      "Get high-quality, market-tested forex signals that highlight profitable opportunities and help you enter trades with confidence.",
     image: signalImg,
   },
   {
     title: "Risk Management",
     description:
-      "Comprehensive strategies to manage risk effectively, protecting your investments and maximizing returns.",
+      "Implement proven risk-control methods that safeguard your capital while enhancing long-term profitability and stability.",
     image: riskImg,
   },
   {
     title: "Personal Coaching",
     description:
-      "One-on-one coaching sessions to refine your trading skills and strategies with personalized guidance.",
+      "Receive tailored one-on-one mentoring designed to strengthen your trading approach, mindset, and performance.",
     image: coachingImg,
   },
 ];
@@ -37,13 +37,17 @@ const Services = () => (
         </span>
       </h2>
       <p>
-        At CopifyFX.trade, we empower traders with intelligent forex solutions
-        designed for success. Our Trading Signals provide precise, data-driven
-        insights to help you make confident market moves. Through Risk
-        Management, we guide you in protecting capital and optimizing
-        performance with disciplined strategies. And with Personal Coaching, our
-        experts offer one-on-one mentorship to help you master trading
-        psychology, strategy, and execution.
+        CopifyFX.trade delivers professional-grade forex solutions designed to
+        elevate your trading journey. Our Trading Signals give you precise,
+        market-backed entries and exits so you can trade confidently and stay
+        ahead of market shifts. With advanced Risk Management support, we help
+        you protect your capital and grow steadily with smart, disciplined
+        strategies.
+      </p>
+      <p>
+        For those seeking deeper mastery, our Personal Coaching sessions provide
+        direct, customized mentoring—helping you sharpen your skills, strengthen
+        psychology, and trade with clarity and control.
       </p>
     </div>
     <div className="services-grid">

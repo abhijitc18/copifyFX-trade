@@ -1,53 +1,50 @@
 import React from "react";
 import "../styles/HowItWorks.css";
-import { FaRegUser, FaLink, FaExchangeAlt } from "react-icons/fa"; // react-icons package
+import { FaRegUser, FaLink, FaExchangeAlt } from "react-icons/fa";
 
 const steps = [
   {
     title: "Open Your Trading Account",
     description:
-      "Sign up with your preferred broker and complete the KYC process in minutes.",
+      "Sign up with your preferred broker and complete KYC in just minutes to get started.",
     icon: <FaRegUser />,
   },
   {
     title: "Connect MT4/MT5 Account",
     description:
-      "Securely link your MetaTrader account for seamless automated trading.",
+      "Easily and securely link your MetaTrader account—no tech experience required.",
     icon: <FaLink />,
   },
   {
     title: "Choose Trader/Strategy",
     description:
-      "Pick a trusted trader or proven strategy and let trades copy automatically.",
+      "Pick a top trader or strategy and activate real-time auto-copy. Sit back and track your results.",
     icon: <FaExchangeAlt />,
   },
 ];
 
 const HowItWorks = () => (
-  <section className="how-it-works-section">
-    <div className="how-it-work-heading">
-      <h2 className="how-it-works-title">How It Works</h2>
+  <section className="how-itworks-minimal">
+    <div className="how-itworks-header">
+      <h2 className="how-itworks-title">How It Works</h2>
       <span className="angled-underline">
         <span className="skew-bar"></span>
         <span className="circle-dot"></span>
       </span>
     </div>
-    <p className="how-it-works-desc">
-      Just three simple steps to start automated copy trading with confidence.
+    <p className="how-itworks-desc">
+      A simple, step-by-step process to start your automated copy trading
+      journey.
     </p>
-    <div className="steps-timeline">
+    <div className="steps-vertical">
       {steps.map((step, idx) => (
-        <div
-          className={`timeline-step step-${idx % 2 === 0 ? "left" : "right"}`}
-          key={idx}
-        >
-          <div className="timeline-content">
-            <div className="timeline-number">{idx + 1}</div>
-            <div className="timeline-icon">{step.icon}</div>
-            <div className="timeline-title">{step.title}</div>
-            <div className="timeline-desc">{step.description}</div>
+        <div className="step-min-card" key={idx}>
+          <div className="step-min-icon">{step.icon}</div>
+          <div className="step-min-info">
+            <div className="step-min-title">{step.title}</div>
+            <div className="step-min-desc">{step.description}</div>
           </div>
-          {idx < steps.length - 1 && <div className="timeline-connector"></div>}
+          {idx < steps.length - 1 && <div className="step-min-connector"></div>}
         </div>
       ))}
     </div>

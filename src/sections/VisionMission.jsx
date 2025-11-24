@@ -1,4 +1,5 @@
 import React from "react";
+import { FaEye, FaRocket } from "react-icons/fa";
 import "../styles/VisionMission.css";
 
 const VisionMission = () => (
@@ -9,21 +10,34 @@ const VisionMission = () => (
         <span className="skew-bar"></span>
         <span className="circle-dot"></span>
       </span>
+      <p className="vision-mission-subtitle">
+        Shaping the future of smart, accessible trading for everyone-one
+        innovation at a time.
+      </p>
     </div>
     <div className="vm-wrapper">
       <div className="vm-card vision-card">
+        <div className="vm-icon vision-icon">
+          <FaEye />
+        </div>
         <h3 className="vm-heading">Vision</h3>
         <p className="vm-text">
-          To make smart, automated trading accessible to everyone through simple
-          technology and trusted strategies.
+          To reshape trading into an intuitive experience where
+          everyone-regardless of background-can access smart, automated
+          financial strategies, unlock new opportunities, and feel empowered by
+          transparent, AI-driven guidance for lifelong financial growth.
         </p>
       </div>
       <div className="vm-card mission-card">
+        <div className="vm-icon mission-icon">
+          <FaRocket />
+        </div>
         <h3 className="vm-heading">Mission</h3>
         <p className="vm-text">
-          To empower users with easy MT4/MT5 connectivity, expert copy trading,
-          and AI-driven insights that help them trade smarter and more
-          confidently.
+          Our mission is to bridge complex trading platforms with seamless
+          technology, providing users with secure MT4/MT5 access, real-time copy
+          trading, and expertly curated AI insights that support confident
+          decisions and sustainable progress for every trader.
         </p>
       </div>
     </div>

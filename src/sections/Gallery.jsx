@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import img1 from "../assets/gallery/gallery-01.jpeg";
 import img2 from "../assets/gallery/gallery-02.jpeg";
@@ -18,24 +18,22 @@ const images = [img1, img2, img3, img4, img5, img6];
 const Gallery = () => (
   <section className="gallery-section">
     <div className="gallery-heading">
-      <h2 className="gallery-title">Featured Mobile Screenshots</h2>
+      <h2 className="gallery-title">Smart Trading. Simple Experience</h2>
       <span className="angled-underline">
         <span className="skew-bar"></span>
         <span className="circle-dot"></span>
       </span>
     </div>
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={30}
+      modules={[Autoplay]}
+      spaceBetween={35}
       slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
       loop={true}
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       breakpoints={{
-        0: { slidesPerView: 1 }, // 1 image on mobile (from 0px up)
-        900: { slidesPerView: 2 }, // 2 images for tablets/small desktop
-        1320: { slidesPerView: 3 }, // 3 images on large desktop
+        0: { slidesPerView: 1 },
+        900: { slidesPerView: 2 },
+        1320: { slidesPerView: 3 },
       }}
     >
       {images.map((src, idx) => (

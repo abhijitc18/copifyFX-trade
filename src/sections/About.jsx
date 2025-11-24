@@ -1,7 +1,7 @@
 // src/sections/About.jsx
 import React from "react";
 import "../styles/About.css";
-import aboutImg from "../assets/about-us.jpg";
+import aboutImg from "../assets/about-us.png";
 import {
   FaLinkedin,
   FaInstagram,
@@ -20,19 +20,23 @@ const About = () => (
         </span>
       </h2>
       <p>
-        CopifyFX is an experienced Forex trader with over 10 years of expertise
-        in managing large portfolios. With strong knowledge of market trends and
-        risk control. We consistently delivers great results for clients
-        worldwide.
+        CopifyFX is a trusted name in Forex trading, backed by 5+ years of
+        proven experience and consistent performance across global markets. We
+        combine smart strategies with deep market understanding to help traders
+        unlock real, measurable profits.
       </p>
       <p>
-        Our services include trading signals, one-on-one coaching, and market
-        insights to help traders at every level grow. CopifyFX is dedicated to
-        teaching beginners and encouraging disciplined trading habits.
+        From high-accuracy trading signals to one-on-one coaching and daily
+        market insights, our services are designed to fast-track your growth.
+        Whether you're a beginner looking to start trading confidently or an
+        experienced trader aiming for bigger wins, CopifyFX gives you the tools
+        to level up.
       </p>
       <p>
-        Our focus on honesty and client success has made him a respected and
-        trusted Forex professional across global markets.
+        Our commitment to transparency, reliable results, and hands-on guidance
+        has built us a strong reputation among traders worldwide. With CopifyFX,
+        you’re not just trading—you’re trading with confidence, clarity, and a
+        partner who wants you to win.
       </p>
 
       <div className="social-icons">

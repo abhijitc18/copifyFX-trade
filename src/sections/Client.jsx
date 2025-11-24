@@ -5,54 +5,61 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { FaQuoteLeft } from "react-icons/fa";
 
-// Placeholder images, add your own to src/assets/
+// Placeholder images
 import client1 from "../assets/Testimonial_male.jpg";
 import client2 from "../assets/Testimonial_female.jpeg";
-import client3 from "../assets/Testimonial_male.jpg";
 
-// Emoji stars for rating
-const stars = (n) => "★".repeat(n) + "☆".repeat(5 - n);
+const StarRating = ({ count }) => (
+  <span className="star-rating">
+    {Array.from({ length: 5 }).map((_, i) => (
+      <span key={i} className={i < count ? "star active" : "star"}>
+        ★
+      </span>
+    ))}
+  </span>
+);
 
 const clients = [
   {
-    name: "Ravindra Chavan",
+    name: "Arjun Mehta",
     image: client1,
-    profit: "Achieved 150% ROI",
+    profit: "120% ROI",
     quote:
-      "Before Sniper AI, I lost money because of emotional trades. Now, every move is backed by analysis. My portfolio looks healthier than ever.",
-    rating: 5,
-  },
-  {
-    name: "Priti Patil",
-    image: client2,
-    profit: "Achieved 120% ROI",
-    quote:
-      "I’m new to trading, but the team guided me really well. The setup was simple, and within a month I started seeing profits.",
+      "CopifyFX ने माझ्या ट्रेडिंगला स्थिरता दिली. आता निर्णय अधिक स्पष्ट आणि आत्मविश्वासाने घेतो.",
     rating: 4,
   },
   {
-    name: "Vishal Phadtare",
-    image: client3,
-    profit: "Achieved 200% ROI",
+    name: "Ritik Sharma",
+    image: client1,
+    profit: "150% ROI",
     quote:
-      "I work full-time and can’t watch charts all day. The AI does everything automatically. I just check my results every evening — it’s that easy!",
+      "The automated setup saves a lot of time and keeps profits steady. Perfect for busy traders.",
     rating: 5,
   },
   {
-    name: "Prajwal Singh",
-    image: client3,
-    profit: "Achieved 200% ROI",
+    name: "Varun Patil",
+    image: client1,
+    profit: "140% ROI",
     quote:
-      "I don’t have much time to trade manually. This system does it all for me. Sniper AI is like having a pro trader by your side — 24/7!",
+      "High accuracy, no stress, and very smooth execution. CopifyFX has upgraded my trading style.",
     rating: 5,
   },
   {
-    name: "Nikhil Choudhary",
-    image: client3,
-    profit: "Achieved 200% ROI",
+    name: "Nisha Kulkarni",
+    image: client2,
+    profit: "95% ROI",
     quote:
-      "This platform saves time and reduces stress. I don’t have to guess or panic anymore — everything is based on data.",
+      "Signals अगदी स्पष्ट आहेत, guidance सोपी आहे, आणि नफा सातत्याने मिळत आहे. छान अनुभव.",
+    rating: 5,
+  },
+  {
+    name: "Sagar Nair",
+    image: client1,
+    profit: "130% ROI",
+    quote:
+      "Clean analysis, steady results, and honest support. Truly reliable for consistent forex growth.",
     rating: 5,
   },
 ];
@@ -62,18 +69,21 @@ const Clients = () => (
     <div className="client-heading">
       <h2 className="happy-clients-title">
         Success Stories from Happy Clients
-        <span className="angled-underline">
-          <span className="skew-bar"></span>
-          <span className="circle-dot"></span>
-        </span>
       </h2>
+      <span className="angled-underline">
+        <span className="skew-bar"></span>
+        <span className="circle-dot"></span>
+      </span>
+      <p className="clients-subtext">
+        Trusted by traders who demand accuracy, consistency, and real financial
+        growth.
+      </p>
     </div>
+
     <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
+      modules={[Autoplay]}
       spaceBetween={40}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
       loop={true}
       autoplay={{ delay: 3500, disableOnInteraction: false }}
       breakpoints={{
@@ -83,16 +93,21 @@ const Clients = () => (
     >
       {clients.map((client, idx) => (
         <SwiperSlide key={idx}>
-          <div className="client-card">
-            <img
-              src={client.image}
-              className="client-image"
-              alt={client.name}
-            />
-            <div className="client-name">{client.name}</div>
-            <div className="client-profit">{client.profit}</div>
-            <div className="client-quote">“{client.quote}”</div>
-            <div className="star-rating">{stars(client.rating)}</div>
+          <div className="client-card-glass">
+            <div className="client-image-wrap">
+              <img
+                src={client.image}
+                className="client-image-glass"
+                alt={client.name}
+              />
+            </div>
+            <div className="client-card-content">
+              <FaQuoteLeft className="quote-icon" />
+              <div className="client-quote-glass">“{client.quote}”</div>
+              <div className="client-name-glass">{client.name}</div>
+              <div className="client-profit-glass">{client.profit}</div>
+              <StarRating count={client.rating} />
+            </div>
           </div>
         </SwiperSlide>
       ))}

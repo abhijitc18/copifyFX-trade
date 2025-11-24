@@ -35,14 +35,14 @@
 
 .social-icons a {
   margin-right: 15px;
-  color: #54fff9;
+  color: #7b7d7c;
   font-size: 2rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #7b7d7c;
+  color: #24a6f1;
 }
 
 .about-image {

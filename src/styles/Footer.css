@@ -28,7 +28,7 @@
 }
 
 .footer-column h3:hover {
-  color: #7b7d7c;
+  color: #fff;
 }
 
 .footer-column p,
@@ -45,13 +45,13 @@
 }
 
 .footer-social a {
-  color: #54fff9;
+  color: #24a6f1;
   font-size: 2rem;
   transition: color 0.3s;
 }
 
 .footer-social a:hover {
-  color: #7b7d7c;
+  color: #54fff9;
 }
 
 .map-container {
@@ -78,15 +78,23 @@
   }
   .footer-column {
     min-width: 0;
-  }
-  .footer-column {
     flex: 1 1 135px;
     margin-bottom: 0;
   }
+  .footer-column h3 {
+    font-size: 1rem;
+  }
   .footer-column p {
+    font-size: 0.8rem;
     text-align: justify;
+  }
+  .footer-column address {
+    font-size: 0.8rem;
   }
   .footer-bottom {
     padding-top: 0;
+  }
+  .footer-social a {
+    font-size: 1.5rem;
   }
 }

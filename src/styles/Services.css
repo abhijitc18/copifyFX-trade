@@ -7,6 +7,11 @@
   text-align: center;
 }
 
+.service-heading p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
 .services-title {
   position: relative;
   font-size: 2.3rem;
@@ -29,9 +34,12 @@
   border-radius: 20px;
   box-shadow: 0 8px 28px rgba(44, 62, 80, 0.11);
   width: 365px;
-  padding: 2rem 1.5rem;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  padding: 0; /* Remove padding so image fills card */
+  overflow: hidden; /* Ensures border-radius clips image */
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -41,11 +49,12 @@
 
 .service-image {
   width: 100%;
-  height: auto;
-  border-radius: 15px;
+  height: 220px;
+  border-radius: 0;
   object-fit: cover;
-  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.1);
-  margin-bottom: 1rem;
+  display: block;
+  box-shadow: none;
+  margin: 0;
 }
 
 .service-title {
@@ -53,13 +62,21 @@
   font-weight: 700;
   color: #223254;
   margin-bottom: 0.7rem;
+  margin-top: 1.2rem;
 }
 
 .service-desc {
   font-size: 1.07rem;
   color: #505050;
   line-height: 1.55;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.service-title,
+.service-desc {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -67,7 +84,7 @@
     padding: 0 1rem 0 1rem;
   }
   .services-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .service-heading p {
     text-align: justify;
@@ -81,7 +98,7 @@
   }
   .service-desc {
     text-align: justify;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 
