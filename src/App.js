@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import About from "./sections/About";
@@ -7,7 +8,6 @@ import Services from "./sections/Services";
 import OurPartner from "./sections/OurPartner";
 import TradingViewWidget from "./components/TradingViewWidget";
 import Client from "./sections/Client";
-// import Contact from "./sections/Contact";
 import Gallery from "./sections/Gallery";
 import KeyFeatures from "./sections/KeyFeatures";
 import HowItWorks from "./sections/HowItWorks";
@@ -17,13 +17,14 @@ import FAQ from "./sections/FAQ";
 import FloatingButtons from "./components/FloatingButtons";
 import PopupModel from "./components/PopupModal";
 import partners from "./data/partners";
+import CopifyTrade from "./sections/CopifyTrade";
 import "./App.css";
 
-function App() {
+function HomePage() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="App">
+    <>
       <Navbar openModal={() => setShowModal(true)} />
       <main>
         <HeroSlider />
@@ -34,7 +35,6 @@ function App() {
         <OurPartner openModal={() => setShowModal(true)} />
         <TradingViewWidget />
         <Client />
-        {/* <Contact /> */}
         <Gallery />
         <KeyFeatures />
         <HowItWorks />
@@ -47,7 +47,23 @@ function App() {
       </main>
       <FloatingButtons />
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* HomePage */}
+          <Route path="/" element={<HomePage />} />
+          
+          {/* CopifyTrade Landing Page */}
+          <Route path="/copifytrade" element={<CopifyTrade />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
